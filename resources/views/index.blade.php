@@ -1,48 +1,6 @@
 @extends('app')
 @section('content')
-<!--Offcanvas Menu-->
-<div class="vlt-offcanvas-menu">
-    <div class="vlt-offcanvas-menu__header">
-        <!--Locales-->
-        <div class="vlt-language-switcher"><a class="is-active" href="#">Eng</a><a href="#">Fra</a><a href="#">Ger</a></div>
-        <!--Menu Burger--><a class="vlt-menu-burger vlt-menu-burger--opened js-offcanvas-menu-close" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                <defs />
-                <path d="M18 6L6 18M6 6l12 12" /></svg></a>
-    </div>
-    <nav class="vlt-offcanvas-menu__navigation">
-        <!--Navigation-->
-        <ul class="sf-menu">
-            <li data-menuanchor="Home"><a href="#Home">Home</a>
-            </li>
-            <li data-menuanchor="About"><a href="#About">About</a>
-            </li>
-            <li data-menuanchor="Projects"><a href="#Projects">Projects</a>
-            </li>
-            <li data-menuanchor="Education"><a href="#Education">Education</a>
-            </li>
-            <li data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a>
-            </li>
-            <li data-menuanchor="Partners"><a href="#Partners">Partners</a>
-            </li>
-            <li data-menuanchor="Blog"><a href="#Blog">Blog</a>
-            </li>
-            <li data-menuanchor="Contact"><a href="#Contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="vlt-offcanvas-menu__footer">
-        <!--Socials-->
-        <div class="vlt-offcanvas-menu__socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-instagram"></i></a></div>
-        <!--Copyright-->
-        <div class="vlt-offcanvas-menu__copyright">
-            <p>© 2020 Copyright.<br>All rights reserved.</p>
-        </div>
-    </div>
-</div>
-<!--Site Overlay-->
-<div class="vlt-site-overlay"></div>
-<!--Fixed socials-->
-<div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"><i class="lnir-instagram"></i></a></div>
+
 <!--Main-->
 <main class="vlt-main">
     <!--Fullpage Slider-->
@@ -147,70 +105,7 @@
                 </div>
             </div>
         </div>
-        <!--Projects-->
-        <!--Section-->
-        <div class="vlt-section pp-scrollable" data-anchor="Projects">
-            <div class="vlt-section__vertical-align">
-                <div class="vlt-section__content">
-                    <!--Projects-->
-                    <div class="vlt-section__projects-background"><img class="is-active" src="{{ asset('assets/img/project-01.jpg')}}" alt="" loading="lazy"><img src="{{ asset('assets/img/project-02.jpg')}}" alt="" loading="lazy"><img src="assets/img/project-03.jpg" alt="" loading="lazy"></div>
-                    <div class="container">
-                        <div class="vlt-gap-100"></div>
-                        <!--Animated Block-->
-                        <div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:0s; animation-duration:700ms;">
-                            <!--Content slider-->
-                            <div class="vlt-content-slider " data-navigation-anchor=".vlt-projects-anchor" data-effect="fade" data-gap="" data-loop="" data-speed="" data-autoplay="" data-autoplay-speed="" data-slides-centered="" data-slide-settings="{}" data-free-mode="" data-slider-offset="" data-mousewheel="">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <!--Product-->
-                                            <article class="vlt-project">
-                                                <h3 class="vlt-project-title">Watch<span class="has-accent-color">.</span></h3>
-                                                <div class="vlt-project-excerpt">
-                                                    <p>Bring saw gathering kind evening them air him void morning dominion spirit multiply seas shall day were likeness. Upon tree a gathering.</p>
-                                                </div>
-                                                <!--Button--><a class="vlt-btn vlt-btn--primary vlt-btn--md" href="single-product.html" target="_self">See Project</a>
-                                            </article>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!--Product-->
-                                            <article class="vlt-project">
-                                                <h3 class="vlt-project-title">The Bottle<span class="has-accent-color">.</span></h3>
-                                                <div class="vlt-project-excerpt">
-                                                    <p>Working with client and community, we deliver masterplans that create vibrant new places and spaces, attract people, and encourage investment through.</p>
-                                                </div>
-                                                <!--Button--><a class="vlt-btn vlt-btn--primary vlt-btn--md" href="single-product.html" target="_self">See Project</a>
-                                            </article>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <!--Product-->
-                                            <article class="vlt-project">
-                                                <h3 class="vlt-project-title">Aesop<span class="has-accent-color">.</span></h3>
-                                                <div class="vlt-project-excerpt">
-                                                    <p>Third dry hath saying our over fruit Place creeping creepeth let Good. Created also darkness which open appear cattle Second shall brought wherein given. Moveth.</p>
-                                                </div>
-                                                <!--Button--><a class="vlt-btn vlt-btn--primary vlt-btn--md" href="single-product.html" target="_self">See Project</a>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vlt-gap-150"></div>
-                            <!--Slider controls-->
-                            <div class="vlt-slider-controls vlt-slider-controls--style-2 vlt-projects-anchor">
-                                <div class="vlt-swiper-pagination"></div>
-                                <div class="vlt-swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
-                                        <defs />
-                                        <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd" /></svg></div>
-                                <div class="vlt-swiper-button-next"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
-                                        <defs />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor" /></svg></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!--Education-->
         <!--Section-->
         <div class="vlt-section pp-scrollable" data-anchor="Education">
@@ -375,108 +270,15 @@
                 </div>
             </div>
         </div>
-        <!--Testimonials-->
+        <!--Designs-->
         <!--Section-->
-        <div class="vlt-section pp-scrollable" data-anchor="Testimonials">
-            <div class="vlt-section__vertical-align">
-                <div class="vlt-section__content">
-                    <!--Ken Burn Effect-->
-                    <div class="vlt-section__ken-burn-background"><img src="{{ asset('assets/img/testimonials.jpg')}}" alt=""></div>
-                    <div class="container">
-                        <div class="row align-items-end">
-                            <div class="col-xl-6">
-                                <!--Animated Block-->
-                                <div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:0s; animation-duration:700ms;">
-                                    <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" style="height: 75px;">
-                                            <defs />
-                                            <path fill="currentColor" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z" /></svg>
-                                        <div class="vlt-gap-215 vlt-gap-100--lg"></div>
-                                        <h3>Creative & dedicated is things that gilber studio brings for your business.</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-2">
-                                <div class="vlt-gap-70--lg"></div>
-                                <!--Animated Block-->
-                                <div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:.1s; animation-duration:700ms;">
-                                    <!--Content slider-->
-                                    <div class="vlt-content-slider " data-navigation-anchor=".vlt-testimonials-anchor" data-effect="" data-gap="" data-loop="" data-speed="" data-autoplay="" data-autoplay-speed="" data-slides-centered="" data-slide-settings="{}" data-free-mode="" data-slider-offset="" data-mousewheel="">
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <!--Testimonial-->
-                                                    <div class="vlt-testimonial">
-                                                        <div class="vlt-testimonial__text">
-                                                            <p>&quot;Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let.&quot;
-                                                            </p>
-                                                        </div>
-                                                        <div class="vlt-testimonial__meta">
-                                                            <h5 class="vlt-testimonial__name">Dwight Schrute
-                                                            </h5>
-                                                            <div class="vlt-testimonial__function">The Office
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <!--Testimonial-->
-                                                    <div class="vlt-testimonial">
-                                                        <div class="vlt-testimonial__text">
-                                                            <p>&quot;Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let.&quot;
-                                                            </p>
-                                                        </div>
-                                                        <div class="vlt-testimonial__meta">
-                                                            <h5 class="vlt-testimonial__name">Paul &amp; Amanda
-                                                            </h5>
-                                                            <div class="vlt-testimonial__function">Envato Studio
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <!--Testimonial-->
-                                                    <div class="vlt-testimonial">
-                                                        <div class="vlt-testimonial__text">
-                                                            <p>&quot;Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let.&quot;
-                                                            </p>
-                                                        </div>
-                                                        <div class="vlt-testimonial__meta">
-                                                            <h5 class="vlt-testimonial__name">Ramsay Bolton
-                                                            </h5>
-                                                            <div class="vlt-testimonial__function">Apple Inc
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="vlt-gap-75"></div>
-                                    <!--Slider controls-->
-                                    <div class="vlt-slider-controls vlt-slider-controls--style-1 vlt-testimonials-anchor">
-                                        <div class="vlt-swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
-                                                <defs />
-                                                <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd" /></svg></div>
-                                        <div class="vlt-swiper-button-next"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
-                                                <defs />
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor" /></svg></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Partners-->
-        <!--Section-->
-        <div class="vlt-section pp-scrollable" data-anchor="Partners">
+        <div class="vlt-section pp-scrollable" data-anchor="Designs">
             <div class="vlt-section__vertical-align">
                 <div class="vlt-section__content">
                     <div class="container">
                         <!--Animated Block-->
                         <div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:0s; animation-duration:700ms;">
-                            <h3>Partners</h3>
+                            <h3>Designs</h3>
                         </div>
                         <div class="vlt-gap-100"></div>
                         <!--Animated Block-->

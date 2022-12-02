@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\FrontController;
+use \App\Http\Controllers\BackController;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\SettingController;
+use \App\Http\Controllers\AboutController;
+use \App\Http\Controllers\EducationController;
+use \App\Http\Controllers\PartnerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,17 +21,13 @@ use \App\Http\Controllers\HomeController;
 require __DIR__.'/auth.php';
 
 
-Route::get('/', [HomeController::class, 'index'])->name("index");
-
-
-
-
-
+Route::get('/', [FrontController::class, 'index'])->name("index");
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
-
-
-
-
+    Route::get('/admin', [BackController::class, 'admin'])->name("admin");
+    Route::resource("homes",HomeController::class);
+    Route::resource("abouts",AboutController::class);
+    Route::resource("educations",EducationController::class);
+    Route::resource("partners",PartnerController::class);
+    Route::resource("settings",SettingController::class);
 });
