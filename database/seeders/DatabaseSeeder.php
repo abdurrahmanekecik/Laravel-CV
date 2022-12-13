@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     {
 
 
-        \App\Models\User::factory()->create([
+       /* \App\Models\User::factory()->create([
             'name' => 'Abdurrahman Ekecik',
              'email' => 'info@abdurrahmanekecik.com',
             'password' => bcrypt('123456'),
-         ]);
+         ]); */
 
-    /*    \App\Models\Setting::factory()->create([
+       \App\Models\Setting::factory()->create([
             'name' => 'Abdurrahman Ekecik',
             'description' => 'Abdurrahman Ekecik',
             'favicon' => 'test',
@@ -33,6 +33,6 @@ class DatabaseSeeder extends Seeder
             'port' => '465',
             'ssltls' => 'ssl',
 
-        ]); */
+        ]);
     }
 }
