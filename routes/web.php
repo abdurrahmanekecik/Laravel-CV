@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\Admin\ProjectController;
 use app\Http\Controllers\Admin\EducationController;
 use app\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\FrontendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,30 +20,13 @@ use app\Http\Controllers\Admin\BlogController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProfileController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
