@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->default("");
-            $table->string('description')->default("");
-            $table->string('favicon')->default("");
-            $table->string('logo')->default("");
-            $table->string('server')->default("");
-            $table->string('user')->default("");
-            $table->string('pass')->default("");
-            $table->string('port')->default("");
-            $table->string('ssltls')->default("");
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('favicon')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('server')->nullable();
+            $table->string('user')->nullable();
+            $table->string('pass')->nullable();
+            $table->string('port')->nullable();
+            $table->string('ssltls')->nullable();
             $table->timestamps();
         });
     }

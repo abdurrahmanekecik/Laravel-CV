@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->string("experience_years");
-            $table->string("experience_text");
-            $table->string("experience_heading");
-            $table->string("experience_description");
-            $table->text("skills");
+            $table->string("experience_years")->nullable();
+            $table->string("experience_text")->nullable();
+            $table->string("experience_heading")->nullable();
+            $table->string("experience_description")->nullable();
+            $table->text("skills")->nullable();
             $table->timestamps();
         });
     }

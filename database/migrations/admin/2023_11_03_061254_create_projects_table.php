@@ -13,20 +13,20 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string("heading");
-            $table->string("description");
-            $table->string("summary");
-            $table->string("slug_url");
-            $table->string("background_image");
-            $table->string("author");
-            $table->string("service");
-            $table->date("date");
-            $table->string("detail");
-            $table->string("image");
-            $table->string("idea_text");
-            $table->string("idea_video");
-            $table->string("result_text");
-            $table->string("result_image");
+            $table->string("heading")->nullable();
+            $table->string("description")->nullable();
+            $table->string("summary")->nullable();
+            $table->string("slug_url")->nullable();
+            $table->string("background_image")->nullable();
+            $table->string("author")->nullable();
+            $table->string("service")->nullable();
+            $table->date("date")->nullable();
+            $table->string("detail")->nullable();
+            $table->string("image")->nullable();
+            $table->string("idea_text")->nullable();
+            $table->string("idea_video")->nullable();
+            $table->string("result_text")->nullable();
+            $table->string("result_image")->nullable();
             $table->timestamps();
         });
     }
