@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Setting;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -44,7 +46,10 @@ class SettingController extends Controller
      */
     public function edit(Setting $setting)
     {
-        //
+
+        $setting = Setting::first();
+
+       return view('admin.settings.edit',compact('setting'));
     }
 
     /**
@@ -52,7 +57,18 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        $setting = Setting::first();
+        $setting->name = $request->name;
+        $setting->description = $request->description;
+        $setting->favicon = $request->name;
+        $setting->logo = $request->logo;
+        $setting->server = $request->server;
+        $setting->user = $request->user;
+        $setting->pass = $request->pass;
+        $setting->ssltls = $request->ssltls;
+        $setting->save();
+
+        return redirect(route("settings.edit", compact('setting')));
     }
 
     /**
