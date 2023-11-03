@@ -7,7 +7,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\Admin\ProjectController;
 use app\Http\Controllers\Admin\EducationController;
-
+use app\Http\Controllers\Admin\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::resource("about",AboutController::class);
     Route::resource("projects",ProjectController::class);
     Route::resource("educations",EducationController::class);
+    Route::resource("blogs",BlogController::class);
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
