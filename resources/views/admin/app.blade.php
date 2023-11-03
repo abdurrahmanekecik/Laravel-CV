@@ -54,7 +54,7 @@
                 </ul>
             </li>
             <li><a href="('blogs.index')"><i class="fa fa-fw fa-flag"></i> Blog</a></li>
-            <li><a href="{{ route('settings.index') }}"><i class="fa fa-fw fa-flag"></i> Settings</a></li>
+            <li><a href="{{ route('settingsGet') }}"><i class="fa fa-fw fa-flag"></i> Settings</a></li>
         </ul>
     </div>
 

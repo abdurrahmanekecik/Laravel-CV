@@ -29,5 +29,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource("abouts",AboutController::class);
     Route::resource("educations",EducationController::class);
     Route::resource("partners",PartnerController::class);
-    Route::resource("settings",SettingController::class);
+    Route::get("/settings", [SettingController::class, 'settingsGet'])->name("settingsGet");
+    Route::post("/settings", [SettingController::class, 'settingsPost'])->name("settingsPost");
 });

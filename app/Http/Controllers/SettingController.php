@@ -2,44 +2,18 @@
 
 namespace App\Http\Controllers;
 use App\Models\Setting;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
 
-    public function index()
+    public function settingsGet()
     {
 
-            $settings = Setting::all();
-            return response()->view('admin.settings.index',compact('settings'));
-
-    }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Setting $setting)
-    {
-        return view('admin.settings.show', compact('setting'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Setting $setting)
-    {
-        return view('admin.settings.edit', compact('setting'));
+        $data = Setting::all()->first();
+        return view('admin.settings.index', compact('data'));
     }
 
     /**
@@ -49,14 +23,15 @@ class SettingController extends Controller
      * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Setting $setting)
+    public function settingsPost(Request $request, Setting $setting)
     {
 
+        $setting = Setting::findOrFail(1);
         $setting->name = $request->name;
         $setting->description = $request->description;
         $setting->favicon = $request->favicon;
         $setting->logo = $request->logo;
-        $setting->server = $request->server;
+        $setting->server_link = $request->server_link;
         $setting->user = $request->user;
         $setting->pass = $request->pass;
         $setting->port = $request->port;
@@ -71,7 +46,7 @@ class SettingController extends Controller
         $setting->save();
 
         if ($setting){
-            return redirect()->route("admin.settings.index");
+            return redirect()->route("settingsGet");
         }else{
             return redirect()->back()->withInput()->with(["error" => "Error update setting"]);
         }

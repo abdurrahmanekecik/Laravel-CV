@@ -1,52 +1,82 @@
 @extends('admin.app')
 @section('tittle', 'Settings')
 @section('content')
-
-    <div class="content p-4">
-
+    <div class="content p-12">
+        <br>
         <h2 class="mb-4">Settings</h2>
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <table id="example" class="table table-hover" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th class="actions">Actions</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        @foreach($settings as $setting)
-
-
-                        <td>{{ $setting->name }}</td>
-                        <td>{{ $setting->description }}</td>
-
-
-                        <td>
-                            <a href="{{ route('settings.edit',$setting->id) }}" class="btn btn-icon btn-pill btn-primary" data-toggle="tooltip"
-                               title="Edit"><i class="fa fa-fw fa-edit"></i></a>
-                            <a href="{{ route('settings.show',$setting->id) }}" class="btn btn-icon btn-pill btn-primary" data-toggle="tooltip"
-                               title="Show"><i class="fa fa-fw fa-eye"></i></a>
-
-                        </td>
-                        @endforeach
-                    </tr>
-
-                    </tbody>
-                </table>
+        <div class="card mb-12">
+            <div class="card-header bg-white font-weight-bold">
+                Settings
             </div>
+            <div class="card-body">
+                <form action="{{ route('settingsPost')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+
+                    <div class="form-group">
+                        <label >Name</label>
+                        <input name="name" type="text" class="form-control"
+                               placeholder="Enter Name" value="{{ $data->name }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label >Description</label>
+                        <input name="description" type="text" class="form-control"
+                               placeholder="Enter Description" value="{{ $data->description }}">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label >Favicon</label>
+                        <img src="{{ $data->favicon }}" style="width: 100px; height: 100px">
+                        <input name="favicon" type="file" class="form-control"
+                               placeholder="Upload Favicon" >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label >Logo</label>
+                        <img src="{{ $data->logo }}" style="width: 100px; height: 100px">
+                        <input name="logo" type="file" class="form-control"
+                               placeholder="Upload Logo" >
+                    </div>
+                    <div class="form-group">
+                        <label >Server</label>
+                        <input name="server_link" type="text" class="form-control"
+                               placeholder="Enter Server" value="{{ $data->server_link }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Smtp Username</label>
+                        <input name="user" type="text" class="form-control"
+                               placeholder="Enter Smtp Username" value="{{ $data->user }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label >Smtp Password</label>
+                        <input name="pass" type="password" class="form-control"
+                               placeholder="Enter Smtp Password" value="{{ $data->pass }}">
+                    </div>
+                    <div class="form-group">
+                        <label >Smtp Port</label>
+                        <input name="port" type="number" class="form-control"
+                               placeholder="Enter Smtp Port" value="{{ $data->port }}">
+                    </div>
+                    <div class="form-group">
+                        <label >Smtp SSL/TLS</label>
+                        <select name="ssltls">
+                            <option value="1">SSL</option>
+                            <option value="0">TLS</option>
+                        </select>
+                    </div>
+
+                    <div class="card-footer bg-white">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
-    </div>
-
-
 
 @endsection
-@section('js')
-@endsection
-@section('css')
-@endsection
+
