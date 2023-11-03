@@ -5,7 +5,7 @@ use app\Http\Controllers\Admin\HomeController;
 use app\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\Admin\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::resource("settings",SettingController::class);
     Route::resource("home",HomeController::class);
     Route::resource("about",AboutController::class);
-
+    Route::resource("projects",ProjectController::class);
+    Route::resource("educations",ProjectController::class);
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
