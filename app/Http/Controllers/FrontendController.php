@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Blog;
 use App\Models\Contact;
-use App\Models\Education;
+use App\Models\Experience;
 use App\Models\Home;
 use App\Models\Project;
 use App\Models\Setting;
@@ -22,7 +22,7 @@ class FrontendController extends Controller
             ->take(3)
             ->get();
 
-        $educations = Education::orderBy('id', 'desc')
+        $experiences = Experience::orderBy('id', 'desc')
             ->take(3)
             ->get();
 
@@ -32,7 +32,6 @@ class FrontendController extends Controller
 
 
 
-
-        return view("index",compact("setting","about","contact","home","blogs","educations","projects"));
+        return view("index",compact("setting","about","contact","home","blogs","experiences","projects"));
     }
 }

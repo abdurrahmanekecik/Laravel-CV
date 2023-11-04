@@ -3,17 +3,17 @@
 namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Education;
+use App\Models\Experience;
 use Illuminate\Http\Request;
 
-class EducationController extends Controller
+class ExperienceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $educations = Education::all();
+        $educations = Experience::all();
         return view("admin.educations.index",compact('educations'));
     }
 
@@ -52,7 +52,7 @@ class EducationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Education $education)
+    public function show(Experience $education)
     {
         //
     }
@@ -60,7 +60,7 @@ class EducationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Education $education)
+    public function edit(Experience $education)
     {
         return view("admin.educations.create",compact('education'));
     }
@@ -68,7 +68,7 @@ class EducationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Education $education)
+    public function update(Request $request, Experience $education)
     {
         $education->heading =  $request->heading;
         $education->description =  $request->description;
@@ -91,7 +91,7 @@ class EducationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Education $education)
+    public function destroy(Experience $education)
     {
         $education->delete();
         return  redirect(route("educations.index"));

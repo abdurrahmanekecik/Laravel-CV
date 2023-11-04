@@ -6,7 +6,7 @@ use app\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\Admin\ProjectController;
-use app\Http\Controllers\Admin\EducationController;
+use app\Http\Controllers\Admin\ExperienceController;
 use app\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\FrontendController;
 /*
@@ -20,7 +20,7 @@ use App\Http\Controllers\FrontendController;
 |
 */
 
-Route::get('/', [ProfileController::class, 'index']);
+Route::get('/', [FrontendController::class, 'index'])->name("home");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,14 +29,11 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
 
-
-
-
     Route::resource("settings",SettingController::class);
     Route::resource("home",HomeController::class);
     Route::resource("about",AboutController::class);
     Route::resource("projects",ProjectController::class);
-    Route::resource("educations",EducationController::class);
+    Route::resource("experiences",ExperienceController::class);
     Route::resource("blogs",BlogController::class);
 
 
